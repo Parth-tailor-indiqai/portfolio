@@ -919,6 +919,23 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Mobile fixes */
+@media (max-width: 768px) {
+  /* Make the hero card just behave like a normal block with margin */
+  .hero-right {
+    margin-bottom: 28px;   /* space between card and heading */
+  }
+
+  /* Put the pill INSIDE the card on mobile */
+  .hero-floating {
+    position: static;      /* no absolute positioning */
+    transform: none;
+    margin: 14px auto 0;   /* center it with some top margin */
+    animation: none;       /* optional: remove float animation on small screens */
+  }
+}
+
   </style>
 </head>
 
@@ -1466,3 +1483,4 @@
 </script>
 </body>
 </html>
+
